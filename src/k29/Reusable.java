@@ -13,7 +13,7 @@ public class Reusable extends Bottle {
         int num = 0;
         do {
             num = r.nextInt((99999 - 10000) + 1) + 10000;
-        } while (Bottle.isPrime(num));
+        } while (isPrime(num));
         return num;
     }
 

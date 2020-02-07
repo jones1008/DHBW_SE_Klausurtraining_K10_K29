@@ -31,18 +31,15 @@ public class Bon {
             return this;
         }
 
-        public Builder amount(double amount) {
-            this.amount = amount;
-            return this;
-        }
-
         public Bon build() {
+            // automatically set date + amount. They don't need to be set manually
             this.date = new Date();
             this.amount = 0.25 * disposable + 0.5 * reusable;
             return new Bon(this);
         }
     }
 
+    @Override
     public String toString() {
         return  "DEPOSIT BON:" + "\n" +
                 date.toString() + "\n" +

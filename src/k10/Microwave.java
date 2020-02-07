@@ -13,14 +13,11 @@ public class Microwave {
         this.state = state;
     }
 
-    public ISwitchState getState() {
-        return state;
-    }
-
     public void pressButton() {
         state.pressButton(this);
     }
 
+    @Override
     public String toString() {
         return "MicrowaveUnit: " + unit + ", state: " + state;
     }

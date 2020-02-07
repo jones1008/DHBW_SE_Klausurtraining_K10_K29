@@ -5,6 +5,7 @@ public class On implements ISwitchState {
         microwave.setState(new Off());
     }
 
+    @Override
     public String toString() {
         return "On";
     }
